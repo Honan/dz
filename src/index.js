@@ -104,7 +104,6 @@ function createProxy(obj) {
 
     let proxy = new Proxy(obj, {
         set(target, prop, value) {
-            alert(`Запись ${prop} ${value}`);
             target[prop] = value * value;
             
             return true;
